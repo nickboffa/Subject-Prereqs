@@ -1,0 +1,8 @@
+#:kivy 2.2.1
+
+<WrappedLabel>:
+    markup: True
+    on_ref_press:
+        import webbrowser
+        webbrowser.open(args[1])
+
