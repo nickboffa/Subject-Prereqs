@@ -229,3 +229,40 @@ def add(t1,t2):
 def scale(t, k): #tuple, scalar
     return tuple([k*t_i for t_i in t])
     
+
+
+
+
+def eligible_courses(G, completed_courses, prefix=None):
+    completed_courses = set(completed_courses)
+    eligible = []
+
+    for course in G.nodes:
+        if prefix and not course.startswith(prefix):
+            continue
+
+        prereqs = set(G.predecessors(course))
+        if prereqs.issubset(completed_courses) and course not in completed_courses:
+            eligible.append(course)
+
+    return sorted(eligible)
+
+def list_options(completed, interested_prefixes):
+
+    G = create_all_graph()
+
+    for prefix in prefixes:
+        print(f"\n{prefix}")
+        elig = eligible_courses(G, nick_completed, prefix=prefix)
+        elig_u = [course for course in elig if int(course[4]) < 4]
+        
+        for course in elig_u:
+            title = names.get(course, '[No title available]')
+            print(f"{course}: {title}")
+
+    
+nick_completed = ["CHEM1101", "BIOL1008", "MATH1115", "HLTH1001", "CHEM1201", "BIOL1004", "BIOL2202", "MATH1116", "STAT2001", "BIOL3207", "BIOL2161", "MEDN2001", "POPH3000", "SCNC2101", "MEDN2002", "STAT2005", "STAT3040", "HLTH3001", "SCNC3101", "MATH2305"]
+
+prefixes = ["STAT", "BIOL", "MATH", "HLTH", "MEDN", "POPH", "COMP"]
+
+# e.g. list_options(nick_completed, prefixes)
