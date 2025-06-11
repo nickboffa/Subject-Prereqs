@@ -1,32 +1,38 @@
+## Code to scrape all course codes currently listed on the ANU's programs and courses 
+# Uses selenium since page dynamically loads courses
+# time.sleep() values might need to be tweaked depending on your internet speed to ensure everything loads
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+import time
 
 chrome_options = Options()
 chrome_options.add_argument("--window-size=1920,1080")
 chrome_options.add_experimental_option('useAutomationExtension', False)
-DRIVER_PATH = '/Users/nicholasboffa/Downloads/chromedriver_mac64 (2)/Chromedriver'
-driver = webdriver.Chrome(executable_path=DRIVER_PATH, chrome_options=chrome_options)
+
+service = Service('/Users/nicholasboffa/Downloads/chromedriver-mac-arm64/chromedriver')
+driver = webdriver.Chrome(service=service, options=chrome_options)
 
 driver.get('https://programsandcourses.anu.edu.au/catalogue')
 
-driver.find_element(By.XPATH, '//button[text()="Courses"]').click()
+wait = WebDriverWait(driver, 10)
 
-driver.find_element(By.XPATH, '//a[@data-template = "course-template"]').click()
+# Click "Courses" button
+wait.until(EC.element_to_be_clickable((By.XPATH, '//button[text()="Courses"]'))).click()
 
-codes = []
-i = 0
-try: 
-    while i < 10000: #ASSUMING < 10000 courses; here in case there is
-        code = driver.find_elements(By.XPATH, './/td[@class="catalogue-search-results__code"]')[i].text
-        if code:
-            codes.append(code)
+time.sleep(4)
 
-        i += 1
+# Click "Show all results..." link
+wait.until(EC.element_to_be_clickable((By.XPATH, '//a[@data-template = "course-template"]'))).click()
 
-    print(codes)
-except:
-    print(codes)
+time.sleep(6)
 
+# Collect codes
+codes = [el.text.strip() for el in driver.find_elements(By.XPATH, './/td[@class="catalogue-search-results__code"]') if el.text.strip()]
 
-
+with open("/data/current/course_codes.txt", "w") as f:
+    f.writelines(code + "\n" for code in codes)
