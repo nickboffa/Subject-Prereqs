@@ -61,22 +61,30 @@ pal <- c("red","orange","yellow","chartreuse","cyan",
 
 # ---- UI -------------------------------------------------------------
 ui <- page_sidebar(
-  title = "Course Prerequisite Explorer",
+  title = "ANU Course Prerequisite Explorer",
   theme = bs_theme(version = 5, bootswatch = "flatly"),
   sidebar = sidebar(
     textInput("target", "Course code", ""),
     radioButtons("direction", "Direction",
-                 choices = c("In", "Out"), inline = TRUE),
+                 choices = c("Out", "In"), inline = TRUE),
     checkboxGroupInput("levels", "Show",
                        choices = c("Undergraduate", "Postgraduate"),
-                       selected = c("Undergraduate", "Postgraduate")),
-    sliderInput("node_spread", "Node & label size", min = 1, max = 10, value = 5),
-    sliderInput("layer_gap",   "Layer gap (px)",   min = 0.3, max = 0.9, value = 0.5, step=0.05),
+                       selected = c("Undergraduate")),
+    sliderInput("node_spread", "Node & label size", min = 5, max = 30, value = 15),
+    sliderInput("layer_gap",   "Squish/stretch layout",   min = 0.3, max = 0.9, value = 0.5, step=0.05),
     actionButton("go", "Submit", class = "btn-primary")
   ),
+  tags$script(HTML("
+  $(document).on('keypress', function(e) {
+    if (e.which == 13 && $('#target').is(':focus')) {
+      $('#go').click();
+    }
+  });
+")),
   visNetworkOutput("graph", height = "700px"),
   br(),
   htmlOutput("blurb", class = "ps-3")
+  
 )
 
 # ---- server ---------------------------------------------------------
@@ -144,17 +152,14 @@ server <- function(input, output, session){
       filter(from %in% nodes$id, to %in% nodes$id) |>
       mutate(
         id    = paste0(from, "→", to),
-        color = ifelse(from %in% rv$highlight_nodes &
-                         to   %in% rv$highlight_nodes,
-                       "#000000", "#d3d3d3"),
-        width = ifelse(from %in% rv$highlight_nodes &
-                         to   %in% rv$highlight_nodes, 4, 2),
-        arrows = list(to = list(enabled = TRUE, scaleFactor = 10))
+        color = ifelse(from %in% rv$highlight_nodes & to %in% rv$highlight_nodes, "#000000", "#d3d3d3"),
+        width = 2,
+        arrows = "to"
       )
     
       visNetwork(nodes, edges, height = "700px") %>%
         visEdges(smooth = FALSE) %>%
-        visOptions(nodesIdSelection = TRUE) %>%
+        visOptions(nodesIdSelection = list(enabled = TRUE, main = "Pick a course")) %>%
         visPhysics(
           enabled = TRUE,                 # turn physics ON briefly
           solver  = "repulsion",
@@ -182,7 +187,7 @@ server <- function(input, output, session){
     rv$highlight_nodes <- unique(c(code, anc, des))
     
     output$blurb <- renderUI({
-      HTML(paste0("<b>", code, ":</b> ", names_vec[[code]], "<br/><br/>",
+      HTML(paste0("<b>", code, ": ", names_vec[[code]], "<br/><br/>",
                   blurbs[[code]]))
     })
   })

@@ -1,0 +1,10 @@
+name: subject_prereqs
+title:
+username: nick-boffa
+account: nick-boffa
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 14924976
+bundleId:
+url: https://nick-boffa.shinyapps.io/subject_prereqs/
+version: 1
