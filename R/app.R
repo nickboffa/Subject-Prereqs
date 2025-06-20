@@ -205,4 +205,70 @@ server <- function(input, output, session) {
       ) |>
       mutate(
         label = id,
-        color = cas
+        color = case_when(
+          input$color == "depth" ~ pal[(depth_vec[id] %% length(pal)) + 1], ### Fix later
+          input$color == "college" ~ pal_college[college],
+          input$color == "subject" ~ pal_subject[subject]
+        ),
+        size = input$node_spread,
+        font.size = input$node_spread,
+        physics = FALSE
+      ) |>
+      select(id, label, title, color, x, y, size, font.size, physics)
+    
+    # Filter nodes to match metadata
+    nodes <- nodes[nodes$id %in% meta$code, ]
+    
+    print(nodes[!nodes$id %in% meta$code])
+    ## edges ----------------------------------------------------------
+    edges <- igraph::as_data_frame(subg, what = "edges") |>
+      filter(from %in% nodes$id, to %in% nodes$id) |>
+      mutate(
+        id    = paste0(from, "→", to),
+        color = ifelse(from %in% rv$highlight_nodes & to %in% rv$highlight_nodes, "#000000", "#d3d3d3"),
+        width = input$node_spread/7,
+        arrows = "to"
+      )
+    
+      visNetwork(nodes, edges, height = "700px") %>%
+        visEdges(smooth = FALSE) %>%
+        visOptions(nodesIdSelection = list(enabled = TRUE, main = "Pick a course")) %>%
+        visPhysics(
+          enabled = TRUE,                 # turn physics ON briefly
+          solver  = "repulsion",
+          repulsion = list(
+            nodeDistance =  10 * input$node_spread,  # how hard to push apart
+            centralGravity = 0,
+            springLength   = 0,
+            springConstant = 0
+          )
+        ) %>%
+        visEvents(                         # after first stabilisation, freeze
+          stabilized = "function () {
+          this.setOptions({physics: {enabled: false}});
+      }"
+        )
+  })
+  
+  # click node --------------------------------------------------------
+  observeEvent(input$graph_selected, {
+    code <- input$graph_selected
+    title <- course_info[course_info$code == code, "title"]
+    blurb <- course_info[course_info$code == code, "blurb"]
+    
+    req(code, rv$subg)
+    
+    anc <- names(subcomponent(rv$subg, code, mode = "in"))
+    des <- names(subcomponent(rv$subg, code, mode = "out"))
+    rv$highlight_nodes <- unique(c(code, anc, des))
+    
+    output$blurb <- renderUI({
+      HTML(paste0("<b>", code, ": ", title, "<br/><br/>",
+                  blurb))
+    })
+  })
+}
+
+
+
+shinyApp(ui, server)

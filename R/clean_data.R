@@ -62,4 +62,51 @@ smart_split_school <- function(school_name, reference_schools) {
     left  <- str_trim(paste(parts[1:i], collapse = " and "))
     right <- str_trim(paste(parts[(i+1):length(parts)], collapse = " and "))
     
-    # Only match full names or distinct substrings of long
+    # Only match full names or distinct substrings of longer ones
+    left_match <- left %in% reference_schools ||
+      any(str_detect(reference_schools, fixed(left)) & nchar(reference_schools) <= nchar(left))
+    
+    right_match <- right %in% reference_schools ||
+      any(str_detect(reference_schools, fixed(right)) & nchar(reference_schools) <= nchar(right))
+    
+    if (left_match || right_match) {
+      return(c(left, right))
+    }
+  }
+  
+  return(school_name)
+}
+
+# School
+course_info <- course_info |>
+  rowwise() |>
+  mutate(
+    school_list = list(smart_split_school(school, all_schools))
+  ) |>
+  ungroup()
+
+# College
+
+course_info <- course_info |>
+  mutate(college_list = str_split(college, " / ") |> lapply(str_trim))
+
+
+# create college to school mapping
+schools <- unlist(course_info$school_list) |> unique()
+colleges <- unlist(course_info$college_list) |> unique()
+college_school_choices <- split(course_info$school, course_info$college)
+college_school_choices <- lapply(college_school_choices, \(x) sort(unique(na.omit(x))))
+college_school_choices <- college_school_choices[names(college_school_choices) %in% colleges]
+
+# have to hard-code as RSB is only present in a CASS/CoSM joint course
+college_school_choices[["College of Science and Medicine"]] <- c(
+  college_school_choices[["College of Science and Medicine"]],
+  "Research School of Biology"
+) |> sort()
+
+pal <- c("red","orange","yellow","chartreuse","cyan",
+         "dodgerblue","mediumslateblue","violet","magenta")
+
+pal_college <- setNames(pal[seq_along(colleges)], colleges)
+
+#create_tree(data = course_info, levels = c("college", "school", ""))
