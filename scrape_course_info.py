@@ -1,40 +1,43 @@
 import requests
 from bs4 import BeautifulSoup
-import json
+import pandas as pd
+from datetime import datetime
 
-with open("/data/current/course_codes.txt", "r") as f:
-    codes = [line.strip() for line in f if line.strip()]
+def get_valid_course_url(code, type): # type = earliest or latest
+    base = "https://programsandcourses.anu.edu.au"
+    current_year = datetime.now().year
 
-blurbs = {}
-names = {}
-for code in codes:
-    url = f'https://programsandcourses.anu.edu.au/course/{code}'
-    page = requests.get(url)
-    soup = BeautifulSoup(page.text, 'html.parser')
+    if type == "earliest":
+        years_to_try = [current_year - 2, current_year - 1, current_year]
+    elif type == "latest":
+        years_to_try = [current_year, current_year - 1, current_year - 2]
 
-    #GETTING THE NAME OF THE COURSE
-    name = soup.find('title').text
-    name = name[:-6] #removing the hidden ' - ANU' in every name
+    for year in years_to_try:
+        url = f"{base}/{year}/course/{code}"
+        try:
+            resp = requests.head(url, allow_redirects=True, timeout=5)
+            if resp.status_code == 200 and "Error/Index/404" not in resp.url:
+                return url
+        except requests.RequestException:
+            continue  # skip to next year on timeout or error
 
-    #GETTING 'REQUISITES AND INCOMPATIBILITY' SECTION
-    try:
-        requisite_text = soup.find('div', class_='requisite').text
-    except AttributeError: #if no requisite section
-        requisite_text = ''
+    return None  # or raise an error/log warning
 
-    requisite_text = requisite_text.replace('\n', '')
-    requisite_text = ' '.join(requisite_text.split())
+assessment_categories = {
+    "exam": ["exam", "final exam"],
+    "test/quiz": ["test", "quiz", "midsem", "mid-sem"],
+    "essay/report": ["essay", "paper", "report", "writing"],
+    "participation": ["participation", "contribution", "attendance", "engagement"],
+    "oral/presentation": ["presentation", "oral", "talk", "pitch"]
+}
 
-    #ADDING TO DICTIONARIES
-    names[code] =  name 
-    blurbs[code] = requisite_text
+def classify_assessment(name):
+    name_lower = name.lower()
+    for category, keywords in assessment_categories.items():
+        if any(keyword in name_lower for keyword in keywords):
+            return category
+    return "other"
 
-    print(code, name)
-
-
-#WRITE BLURBS AND NAMES TO TEXT FILE
-with open('names.txt', 'w') as convert_file:
-    convert_file.write(json.dumps(names))
-
-with open('blurbs.txt', 'w') as convert_file:
-    convert_file.write(json.dumps(blurbs))
+# Read course codes
+with open("data/current/course_codes.txt", "r") as f:
+    codes = [line.st
