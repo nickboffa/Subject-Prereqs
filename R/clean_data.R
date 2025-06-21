@@ -10,6 +10,8 @@ library(readr)
 library(shinyWidgets)
 library(tidyr)
 library(purrr)
+library(DT)
+library(rhandsontable)
 
 course_page_info <- read_csv("../data/current/scrape_course_info_df.csv")
 catalogue_info <- read_csv("../data/current/scrape_catalogue_df.csv")

@@ -1,5 +1,5 @@
 # app.R ---------------------------------------------------------------
-source("clean_data.R")
+#source("clean_data.R")
 
 # ---- load data ------------------------------------------------------
 
@@ -92,11 +92,23 @@ ui <- page_sidebar(
     }
   });
 ")),
-  visNetworkOutput("graph", height = "700px"),
-  br(),
-  
-  br(),
-  htmlOutput("blurb", class = "ps-3"),
+  mainPanel(
+    tabsetPanel(
+      id = "tabs",
+      tabPanel("Graph",
+               visNetworkOutput("graph", height = "700px"),
+               br(),
+               htmlOutput("blurb", class = "ps-3")
+      ),
+      tabPanel("Table",
+               DT::dataTableOutput("filtered_table")
+      ),
+      tabPanel(
+        "Course input",
+        rHandsontableOutput("course_table", height = "220px", width="700px")
+      )
+    )
+  )
 )
 
 # ---- server ---------------------------------------------------------
@@ -266,6 +278,56 @@ server <- function(input, output, session) {
       HTML(paste0("<b>", code, ": ", title, "<br/><br/>",
                   blurb))
     })
+  })
+  
+  output$filtered_table <- DT::renderDataTable({
+    filtered_course_info() |> 
+      select(code, title, college, school, career, session, areas_of_interest)
+  })
+  
+  # course data table
+  code_choices  <- unique(course_info$code) |> sort()
+  title_choices <- unique(course_info$title) |> sort()
+  
+  rv <- reactiveValues(
+    data = data.frame(
+      code  = "",
+      title = "",
+      units = NA_integer_,
+      grade = 100,
+      stringsAsFactors = FALSE
+    )
+  )
+  
+  output$course_table <- renderRHandsontable({
+    rhandsontable(rv$data, stretchH = "all") %>%
+      hot_col("code",
+              type          = "autocomplete",   # <─ searchable
+              source        = code_choices,
+              allowInvalid  = FALSE) %>%
+      hot_col("title",
+              type          = "autocomplete",   # <─ searchable
+              source        = title_choices,
+              allowInvalid  = FALSE)
+  })
+  
+  observeEvent(input$course_table, ignoreNULL = TRUE, {
+    df <- hot_to_r(input$course_table)
+    df$code <- toupper(df$code)
+    ## 1 ─ user changed/typed a *code*  -------------------------------
+    idx_code <- match(df$code, course_info$code)
+    has_code <- !is.na(idx_code)
+    df$title[has_code] <- course_info$title[idx_code[has_code]]   # autofill title
+    df$units[has_code] <- course_info$units[idx_code[has_code]]   # autofill units
+    
+    ## 2 ─ user changed/typed a *title* ------------------------------
+    idx_title <- match(df$title, course_info$title)
+    has_title   <- !is.na(idx_title)
+    df$code[has_title]  <- course_info$code[idx_title[has_title]]     # autofill code
+    df$units[has_title] <- course_info$units[idx_title[has_title]]    # autofill units
+    df$grade[has_title] <- 100
+    
+    rv$data <- df                                                # update store
   })
 }
 
