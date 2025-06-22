@@ -4,7 +4,7 @@ TOKENS <- c(
   "COURSE", "MARK", "UNITS", "NUMBER",
   "AND", "OR", "NOT", "CONCURRENT",
   "PROGRAM", "PERMISSION", "PROFICIENCY",
-  "COMPLETED", "LEVEL"
+  "COMPLETED", "LEVEL", "PERIOD"
 )
 
 numbers <- c(
@@ -15,17 +15,20 @@ numbers <- c(
 
 fix_blurb <- function(blurb) {
   blurb |>
-    # 1 ─ insert a space after any “.” that is jammed between two word chars
+    # insert a space after any dot between non-whitespace
     str_replace_all("(?<=\\S)\\.(?=\\S)", ". ") |>
     
-    # 2 ─ your other normalisations
+    # normalise camelCase or attached punctuation
     str_replace_all("([a-z])([A-Z])", "\\1 \\2") |>
     str_replace_all("([a-zA-Z])\\(", "\\1 (") |>
     str_replace_all("\\)([a-zA-Z])", ") \\1") |>
     str_replace_all("(or|and)([A-Z])", "\\1 \\2") |>
     
     str_squish() |>
-    tolower()
+    tolower() |>
+    
+    # remove any final punctuation like . ; ! ? ' " (even spaces or \n)
+    str_replace_all("[[:punct:][:space:]]*$", "")
 }
 
 BlurbLexer <- R6::R6Class(
@@ -36,35 +39,38 @@ BlurbLexer <- R6::R6Class(
     tokens = TOKENS,
     
     # Keywords
-    t_AND = function(re='\\band\\b|[.]|&', t) {
-      
-      if (t$value == ".") {
-        input <- t$lexer$lexdata
-        pos   <- t$lexpos          # zero-based
-        # move to the NEXT character after the period
-        remainder <- substr(input, pos + 2L, nchar(input))
-        
-        # emit AND only if there is a non-whitespace character ahead
-        if (!str_detect(remainder, "\\S")) return(NULL)
-      }
-      
+    t_AND = function(re='\\band\\b|&', t) {
       t$type  <- "AND"
       t$value <- "AND"
       t
     },
-    t_OR = function(
-    #   1.  “,   or”   (any spaces)          ← longest, matched first
-      #   2.  bare word  “or”
-      #   3.  a comma that is *not* followed by “or”
-      re = ",\\s*or\\b|\\bor\\b|,|/ ",
-      t
-    ) {
-      t$type  <- "OR"
-      t$value <- "OR"
-      return(t)
+    t_PERIOD = function(re='[.]', t) t,
+    
+    # Course codes (works with 'math6212/3320')
+    last_prefix = "",
+    
+    t_OR = function(re = ",\\s*or\\b|\\bor\\b|/", t){
+      t$type <- t$value <- "OR"; t
     },
     
-    t_NOT = function(re='\\bnot\\b|\\bincompatible\\b', t) t,
+    t_COURSE = function(
+    re = "(?:[a-z]{4}[0-9]{4})|(?:[0-9]{4})", t) {
+      
+      if (nchar(t$value) == 4) {                     # digits only
+        t$value <- paste0(self$last_prefix, t$value)
+      } else {
+        self$last_prefix <- substr(t$value, 1, 4)
+      }
+      
+      t$value        <- toupper(t$value)             # ← normalise to upper-case
+      self$last_prefix <- toupper(self$last_prefix)  # keep prefix in sync
+      t
+    },
+    
+    t_NOT = function(
+    re="\\b(incompatible|cannot\\s+enrol|may\\s+not\\s+enrol|not)\\b", t){
+      t$type<-t$value<-"NOT"; t
+    },
     
     t_COMPLETED = function(re='\\bcompleted\\b', t) t,
     
@@ -89,21 +95,7 @@ BlurbLexer <- R6::R6Class(
       return(t)
     },
     
-    # Course codes (works with 'math6212/3320')
-    last_prefix = "",              # ← remembers the most-recent 4-letter tag
-    
-    # ---------------------------------------------------------------------
-    t_COURSE = function(re = "[a-z]{4}\\d{4}|/\\d{4}", t) {
-      
-      if (substr(t$value, 1, 1) == "/") {            # case  "/3320"
-        # inherit the previous 4-letter prefix
-        t$value <- paste0(self$last_prefix, substr(t$value, 2, 5))
-      } else {                                       # case "math6212"
-        # store the new prefix for later use
-        self$last_prefix <- substr(t$value, 1, 4)
-      }
-      return(t)
-    },
+    t_ATLEAST = function(re="\\b(at\\s+least|minimum\\s+of|no\\s+fewer\\s+than)\\b", t) t,
     
     # not good :(
     t_PROGRAM = function(
