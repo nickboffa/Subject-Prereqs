@@ -4,7 +4,7 @@ TOKENS <- c(
   "COURSE", "MARK", "UNITS", "NUMBER",
   "AND", "OR", "NOT", "CONCURRENT",
   "PROGRAM", "PERMISSION", "PROFICIENCY",
-  "COMPLETED", "LEVEL", "PERIOD"
+  "COMPLETED", "LEVEL", "PERIOD", "EQUIVALENT"
 )
 
 numbers <- c(
@@ -49,7 +49,7 @@ BlurbLexer <- R6::R6Class(
     # Course codes (works with 'math6212/3320')
     last_prefix = "",
     
-    t_OR = function(re = ",\\s*or\\b|\\bor\\b|/", t){
+    t_OR = function(re = ",\\s*or\\b|\\bor\\b|/|\\botherwise\\b", t){
       t$type <- t$value <- "OR"; t
     },
     
@@ -95,8 +95,6 @@ BlurbLexer <- R6::R6Class(
       return(t)
     },
     
-    t_ATLEAST = function(re="\\b(at\\s+least|minimum\\s+of|no\\s+fewer\\s+than)\\b", t) t,
-    
     # not good :(
     t_PROGRAM = function(
     re = "(bachelor|master|mather|juris) of [a-z]+( [a-z]+){0,4}( \\(advanced\\))?( in [a-z]+( [a-z]+){0,1})?",
@@ -120,6 +118,8 @@ BlurbLexer <- R6::R6Class(
       t$value <- "permission"
       return(t)
     },
+    
+    t_EQUIVALENT = function(re = "equivalent|similar", t) t,
     
     t_UNITS = function(re = "\\bunits?\\b", t) t,   # just flag the word itself
     
@@ -171,4 +171,4 @@ a <- function(code) {
 }
 
 
-a("BIOL2202")
+a("CHEM1201")
