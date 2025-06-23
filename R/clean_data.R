@@ -17,6 +17,7 @@ course_page_info <- read_csv("../data/current/scrape_course_info_df.csv")
 catalogue_info <- read_csv("../data/current/scrape_catalogue_df.csv")
 
 course_info <- left_join(course_page_info, catalogue_info, by = "code")
+program_info <- catalogue_info <- read_csv("../data/current/scrape_program_codes_df.csv")
 
 all_codes <- unique(course_info$code)
 

@@ -1,4 +1,5 @@
 library(rly)
+library(stringdist)
 
 TOKENS <- c(
   "COURSE", "MARK", "UNITS", "NUMBER",
@@ -13,23 +14,19 @@ numbers <- c(
   eleven = 11, twelve = 12, thirteen = 13, fourteen = 14, fifteen = 15
 )
 
-fix_blurb <- function(blurb) {
-  blurb |>
-    # insert a space after any dot between non-whitespace
-    str_replace_all("(?<=\\S)\\.(?=\\S)", ". ") |>
-    
-    # normalise camelCase or attached punctuation
-    str_replace_all("([a-z])([A-Z])", "\\1 \\2") |>
-    str_replace_all("([a-zA-Z])\\(", "\\1 (") |>
-    str_replace_all("\\)([a-zA-Z])", ") \\1") |>
-    str_replace_all("(or|and)([A-Z])", "\\1 \\2") |>
-    
-    str_squish() |>
-    tolower() |>
-    
-    # remove any final punctuation like . ; ! ? ' " (even spaces or \n)
-    str_replace_all("[[:punct:][:space:]]*$", "")
-}
+escape_rx <- \(x) str_replace_all(x, "([\\^$.|?*+()\\[\\]{}\\\\])", "\\\\\\1")
+
+# 2. concatenate → (?i) = case-insensitive, \\b = whole word
+PROGRAM_RX <- paste0(
+  "(?i)\\b(",
+  paste(
+    c(escape_rx(program_info$code),
+      escape_rx(program_info$title[order(nchar(program_info$title), decreasing = TRUE)])
+    ),
+    collapse = "|"
+  ),
+  ")\\b"
+)
 
 BlurbLexer <- R6::R6Class(
   "BlurbLexer",
@@ -38,13 +35,19 @@ BlurbLexer <- R6::R6Class(
     
     tokens = TOKENS,
     
+    t_PROGRAM = function(re = "<<program:\\s*[^>]+>>", t) {
+      # Extract the content between <<program: ... >>
+      m <- regexec("<<program:\\s*([^>]+)>>", t$value)
+      t$value <- regmatches(t$value, m)[[1]][2] |> str_trim()
+      t
+    },
     # Keywords
     t_AND = function(re='\\band\\b|&', t) {
       t$type  <- "AND"
       t$value <- "AND"
       t
     },
-    t_PERIOD = function(re='[.]', t) t,
+    t_PERIOD = function(re='[.;]', t) t,
     
     # Course codes (works with 'math6212/3320')
     last_prefix = "",
@@ -94,14 +97,7 @@ BlurbLexer <- R6::R6Class(
       t$value <- if (val %in% names(numbers)) numbers[[val]] else as.integer(val)
       return(t)
     },
-    
-    # not good :(
-    t_PROGRAM = function(
-    re = "(bachelor|master|mather|juris) of [a-z]+( [a-z]+){0,4}( \\(advanced\\))?( in [a-z]+( [a-z]+){0,1})?",
-    t) {
-      t$value <- str_trim(t$value)
-      t
-    },
+
     
     # Marks
     t_MARK = function(re='mark of (\\d{2,3}) (or )?above', t) {
@@ -151,7 +147,7 @@ BlurbLexer <- R6::R6Class(
       return(NULL)
     },
 
-    t_ignore_other = function(re = "[a-z0-9'\",;:()/]+", t) NULL
+    t_ignore_other = function(re = "[a-z0-9'\",:()/]+", t) NULL
   )
 )
 
@@ -160,15 +156,25 @@ lexer <- lex(BlurbLexer)
 blurb <- "To enrol in this course you must have completed MATH1115 with a mark of 60 or above or MATH1113 with a mark of 80 or above. You may not enrol in MATH1116 if you are attempting to concurrently enrol or have completed MATH1014."
 
 a <- function(code) {
-  blurb <- course_info[course_info$code == code, "blurb"]
-  blurb <- fix_blurb(blurb)
-  lexer$input(blurb)
+  blurb <- course_info |> 
+    filter(code == !!code) |> 
+    pull(blurb_clean)
   
   print(blurb)
+  lexer$input(blurb)
+  
   while (!is.null(tok <- lexer$token())) {
     cat(sprintf("<%s: %s>\n", tok$type, tok$value))
   }
 }
 
 
+a("STAT3040")
 a("CHEM1201")
+
+a("PHYS6102")
+
+# course_info |> 
+#   filter(str_detect(tolower(blurb), "master of computing or")) |> 
+#   select(code, blurb) %>%
+#   .[1, ]
