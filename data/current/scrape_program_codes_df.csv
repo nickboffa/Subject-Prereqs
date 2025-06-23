@@ -1,0 +1,409 @@
+code,title,study_type,career,atar,years,delivery_type
+4050FDD,"Flexible Double Degree - Arts, Social Sciences, Business, Science",Single,Undergraduate,-,4,In Person
+BACCT,Bachelor of Accounting,Flexible,Undergraduate,80,3,In Person
+HACCT,Bachelor of Accounting (Honours),Single,Undergraduate,-,1,In Person
+BACTS,Bachelor of Actuarial Studies,Flexible,Undergraduate,92,3,In Person
+HACTS,Bachelor of Actuarial Studies (Honours),Single,Undergraduate,-,1,In Person
+AACOM,Bachelor of Advanced Computing (Honours),Flexible,Undergraduate,85,4,In Person
+AACRD,Bachelor of Advanced Computing (Research and Development) (Honours),Flexible,Undergraduate,98,4,In Person
+BADAN,Bachelor of Applied Data Analytics,Flexible,Undergraduate,90,3,In Person
+HADAN,Bachelor of Applied Data Analytics (Honours),Single,Undergraduate,-,1,In Person
+HAPRC,Bachelor of Archaeological Practice (Honours),Single,Undergraduate,-,1,In Person
+HAHCR,Bachelor of Art History and Curatorship (Honours),Single,Undergraduate,-,1,In Person
+BARTS,Bachelor of Arts,Flexible,Undergraduate,80,3,In Person
+HARTS,Bachelor of Arts (Honours),Single,Undergraduate,-,1,In Person
+HART2,Bachelor of Arts (Honours),Single,Undergraduate,-,1,In Person
+BARTY,Bachelor of Arts (with Year in Asia),Single,Undergraduate,-,4,In Person
+BAPAF,Bachelor of Asia-Pacific Affairs,Single,Undergraduate,82,4,In Person
+BAPAR,Bachelor of Asia-Pacific Affairs (Ritsumeikan),Single,Undergraduate,82,4,In Person
+BASIA,Bachelor of Asian Studies,Flexible,Undergraduate,80,3,In Person
+HASIA,Bachelor of Asian Studies (Honours),Single,Undergraduate,-,1,In Person
+BASY,Bachelor of Asian Studies (with Year in Asia),Single,Undergraduate,-,4,In Person
+BBIOT,Bachelor of Biotechnology,Flexible,Undergraduate,80,3,In Person
+HBIOT,Bachelor of Biotechnology (Honours),Single,Undergraduate,-,1,In Person
+BBUSA,Bachelor of Business Administration,Flexible,Undergraduate,80,3,In Person
+HBUSA,Bachelor of Business Administration (Honours),Single,Undergraduate,-,1,In Person
+HCLAS,Bachelor of Classical Studies (Honours),Single,Undergraduate,-,1,In Person
+BCOMM,Bachelor of Commerce,Flexible,Undergraduate,80,3,In Person
+HCOMM,Bachelor of Commerce (Honours),Single,Undergraduate,-,1,In Person
+BCOMP,Bachelor of Computing,Flexible,Undergraduate,80,3,In Person
+HCOMP,Bachelor of Computing (Honours),Single,Undergraduate,-,1,In Person
+BCRIM,Bachelor of Criminology,Flexible,Undergraduate,80,3,Multi-Modal
+HCRIM,Bachelor of Criminology (Honours),Single,Undergraduate,-,1,In Person
+BDESN,Bachelor of Design,Flexible,Undergraduate,-,3,In Person
+HDESN,Bachelor of Design (Honours),Single,Undergraduate,-,1,In Person
+HDEVS,Bachelor of Development Studies (Honours),Single,Undergraduate,-,1,In Person
+BDEVY,Bachelor of Development Studies (with Year in Asia),Single,Undergraduate,-,4,In Person
+BECON,Bachelor of Economics,Flexible,Undergraduate,80,3,In Person
+HECON,Bachelor of Economics (Honours),Single,Undergraduate,-,1,In Person
+AENGI,Bachelor of Engineering (Honours),Flexible,Undergraduate,85,4,In Person
+AENSE,Bachelor of Engineering (Honours) in Software Engineering,Flexible,Undergraduate,85,4,In Person
+AENRD,Bachelor of Engineering (Research and Development) (Honours),Flexible,Undergraduate,98,4,In Person
+BENSU,Bachelor of Environment and Sustainability,Flexible,Undergraduate,80,3,In Person
+HENSU,Bachelor of Environment and Sustainability (Honours),Single,Undergraduate,-,1,In Person
+HENVS,Bachelor of Environmental Studies (Honours),Single,Undergraduate,-,1,In Person
+HEURO,Bachelor of European Studies (Honours),Single,Undergraduate,-,1,In Person
+BFINN,Bachelor of Finance,Flexible,Undergraduate,80,3,In Person
+HFINN,Bachelor of Finance (Honours),Single,Undergraduate,-,1,In Person
+AFEST,"Bachelor of Finance, Economics and Statistics (Honours)",Single,Undergraduate,98,4,In Person
+BGENE,Bachelor of Genetics,Flexible,Undergraduate,85,3,In Person
+HGENE,Bachelor of Genetics (Honours),Single,Undergraduate,-,1,In Person
+BHLTH,Bachelor of Health Science,Single,Undergraduate,90,3,In Person
+HHLTH,Bachelor of Health Science (Honours),Single,Undergraduate,-,1,In Person
+HIT,Bachelor of Information Technology (Honours),Single,Undergraduate,-,1,In Person
+BINBS,Bachelor of International Business,Single,Undergraduate,80,3,In Person
+HINBS,Bachelor of International Business (Honours),Single,Undergraduate,-,1,In Person
+BIR,Bachelor of International Relations,Flexible,Undergraduate,85,3,In Person
+HIR,Bachelor of International Relations (Honours),Single,Undergraduate,-,1,In Person
+BIRY,Bachelor of International Relations (With Year in Asia),Flexible,Undergraduate,-,4,In Person
+BINSS,Bachelor of International Security Studies,Flexible,Undergraduate,85,3,In Person
+HINSS,Bachelor of International Security Studies (Honours),Single,Undergraduate,-,1,In Person
+BINSY,Bachelor of International Security Studies (with Year in Asia),Flexible,Undergraduate,-,4,In Person
+BLANG,Bachelor of Languages,Flexible,Undergraduate,80,3,In Person
+HLANG,Bachelor of Languages (Honours),Single,Undergraduate,-,1,In Person
+BLANY,Bachelor of Languages (with Year in Asia),Single,Undergraduate,-,4,In Person
+ALLB,Bachelor of Laws (Honours),Flexible,Undergraduate,97,4,In Person
+BMASC,Bachelor of Mathematical Sciences,Flexible,Undergraduate,95,3,In Person
+HMASC,Bachelor of Mathematical Sciences (Honours),Single,Undergraduate,-,1,In Person
+BMEDS,Bachelor of Medical Science,Flexible,Undergraduate,85,3,In Person
+HMEDS,Bachelor of Medical Science (Honours),Single,Undergraduate,-,1,In Person
+HMECA,Bachelor of Middle Eastern and Central Asian Studies (Honours),Single,Undergraduate,-,1,In Person
+BMUSI,Bachelor of Music,Flexible,Undergraduate,80,3,In Person
+HMUSI,Bachelor of Music (Honours),Single,Undergraduate,-,1,In Person
+BPAST,Bachelor of Pacific Studies,Flexible,Undergraduate,80,3,In Person
+HPAST,Bachelor of Pacific Studies (Honours),Single,Undergraduate,-,1,In Person
+APHSC,Bachelor of Philosophy (Honours) - Science,Flexible,Undergraduate,99,4,In Person
+AHUSS,Bachelor of Philosophy (Honours)—Humanities and Social Sciences,Single,Undergraduate,99,4,In Person
+BPNP,"Bachelor of Philosophy, Neuroscience, and Psychology",Single,Undergraduate,97,3,In Person
+BPLSC,Bachelor of Political Science,Flexible,Undergraduate,85,3,In Person
+HPLSC,Bachelor of Political Science (Honours),Single,Undergraduate,-,1,In Person
+BPPE,"Bachelor of Politics, Philosophy and Economics",Flexible,Undergraduate,94,3,In Person
+HPPE,"Bachelor of Politics, Philosophy and Economics (Honours)",Single,Undergraduate,-,1,In Person
+APSYC,Bachelor of Psychology (Honours),Single,Undergraduate,90,4,In Person
+BPPOL,Bachelor of Public Policy,Flexible,Undergraduate,85,3,In Person
+HPPOL,Bachelor of Public Policy (Honours),Single,Undergraduate,-,1,In Person
+BSC,Bachelor of Science,Flexible,Undergraduate,80,3,In Person
+ASCAD,Bachelor of Science (Advanced) (Honours),Flexible,Undergraduate,90,4,In Person
+HSC,Bachelor of Science (Honours),Single,Undergraduate,-,1,In Person
+BSPSY,Bachelor of Science (Psychology),Flexible,Undergraduate,80,3,In Person
+HSPSY,Bachelor of Science (Psychology) (Honours),Single,Undergraduate,-,1,In Person
+BSCY,Bachelor of Science (with Year in Asia),Single,Undergraduate,-,4,In Person
+BSTAT,Bachelor of Statistics,Flexible,Undergraduate,80,3,In Person
+HSTAT,Bachelor of Statistics (Honours),Single,Undergraduate,-,1,In Person
+BVART,Bachelor of Visual Arts,Flexible,Undergraduate,-,3,In Person
+HVART,Bachelor of Visual Arts (Honours),Single,Undergraduate,-,1,In Person
+ELANG,Diploma of Languages,Single,Undergraduate,80,1,Multi-Modal
+ESTD,Diploma of Studies,Single,Undergraduate,-,1,Multi-Modal
+4750FDD,Flexible Double Degree - Engineering and Advanced Computing (Honours),Single,Undergraduate,-,5,In Person
+4350FDD,Flexible Double Degree - Law (Honours),Single,Undergraduate,97,5,In Person
+4569FDD,Flexible Double Degree PhB Advanced Arts Social Sciences Business & Science,Single,Undergraduate,-,5,In Person
+8950XMCHD,Doctor of Medicine and Surgery,Single,Postgraduate,-,4,In Person
+MEMPA,Executive Master of Public Administration,Single,Postgraduate,-,1.5,In Person
+MEMPP,Executive Master of Public Policy,Single,Postgraduate,-,1,In Person
+7051FDM,Flexible Double Masters,Single,Postgraduate,-,2,In Person
+6459XGCACC,Graduate Certificate of Accounting,Single,Postgraduate,-,0.5,In Person
+CADAN,Graduate Certificate of Applied Data Analytics,Single,Postgraduate,-,0.5,In Person
+CAPEO,Graduate Certificate of Asia-Pacific Economies,Single,Postgraduate,-,0.5,Online
+GCAPE,Graduate Certificate of Asia-Pacific Economies,Single,Postgraduate,-,0.5,In Person
+CCPOL,Graduate Certificate of Climate Policy,Single,Postgraduate,-,0.5,In Person
+CCPOLO,Graduate Certificate of Climate Policy,Single,Postgraduate,-,0.5,Online
+CCRRO,"Graduate Certificate of Crime, Risk and Resilience",Single,Postgraduate,-,0.5,Online
+CCRR,"Graduate Certificate of Crime, Risk and Resilience",Single,Postgraduate,-,0.5,In Person
+CCCA,Graduate Certificate of Cross-Cultural Analysis,Single,Postgraduate,-,0.5,Multi-Modal
+CDEMO,Graduate Certificate of Demography,Single,Postgraduate,-,0.5,Multi-Modal
+CDITR,Graduate Certificate of Digital Transformation,Single,Postgraduate,-,0.5,In Person
+CDRSS,Graduate Certificate of Disaster Risk Science and Sustainability,Single,Postgraduate,-,0.5,Multi-Modal
+CECON,Graduate Certificate of Economics,Single,Postgraduate,-,0.5,In Person
+CEASI,Graduate Certificate of Engaging Asia,Single,Postgraduate,-,0.5,In Person
+CENPA,Graduate Certificate of Engaging the Pacific,Single,Postgraduate,-,0.5,In Person
+6659XGCENV,Graduate Certificate of Environment,Single,Postgraduate,-,0.5,In Person
+CEVMO,Graduate Certificate of Environmental Management,Single,Postgraduate,-,0.5,Online
+GCEVM,Graduate Certificate of Environmental Management,Single,Postgraduate,-,0.5,In Person
+CERECO,Graduate Certificate of Environmental and Resource Economics,Single,Postgraduate,-,0.5,Online
+CEREC,Graduate Certificate of Environmental and Resource Economics,Single,Postgraduate,-,0.5,In Person
+CFAS,Graduate Certificate of Finance and Actuarial Statistics,Single,Postgraduate,-,0.5,In Person
+CFORS,Graduate Certificate of Forests,Single,Postgraduate,-,0.5,Multi-Modal
+CLING,Graduate Certificate of General and Applied Linguistics,Single,Postgraduate,-,0.5,In Person
+CIDECO,Graduate Certificate of International and Development Economics,Single,Postgraduate,-,0.5,Online
+CIDEC,Graduate Certificate of International and Development Economics,Single,Postgraduate,-,0.5,In Person
+CLAW,Graduate Certificate of Law,Single,Postgraduate,-,0.5,In Person
+CMGMT,Graduate Certificate of Management,Single,Postgraduate,-,0.5,In Person
+CMECA,Graduate Certificate of Middle Eastern and Central Asian Studies,Single,Postgraduate,-,0.5,In Person
+CMUHS,Graduate Certificate of Museum and Heritage Studies,Single,Postgraduate,-,0.5,In Person
+CNSEP,Graduate Certificate of National Security Policy,Single,Postgraduate,-,0.5,In Person
+CNSEPO,Graduate Certificate of National Security Policy,Single,Postgraduate,-,0.5,Online
+CNTL,Graduate Certificate of New Technologies Law,Single,Postgraduate,-,0.5,Online
+CNSSO,Graduate Certificate of Nuclear Security and Safeguards,Single,Postgraduate,-,0.5,Online
+CNSS,Graduate Certificate of Nuclear Security and Safeguards,Single,Postgraduate,-,0.5,In Person
+CNTR,Graduate Certificate of Nuclear Technology Regulation,Single,Postgraduate,-,0.5,In Person
+CPADE,Graduate Certificate of Pacific Development,Single,Postgraduate,-,0.5,In Person
+CPADEO,Graduate Certificate of Pacific Development,Single,Postgraduate,-,0.5,Online
+CPODA,Graduate Certificate of Policy Design and Analysis,Single,Postgraduate,-,0.5,In Person
+CPODAO,Graduate Certificate of Policy Design and Analysis,Single,Postgraduate,-,0.5,Online
+CPOLS,Graduate Certificate of Political Science,Single,Postgraduate,-,0.5,In Person
+CPARC,Graduate Certificate of Professional Archaeology,Single,Postgraduate,-,0.5,In Person
+CPUBH,Graduate Certificate of Public Health,Single,Postgraduate,-,0.5,Multi-Modal
+CPBMA,Graduate Certificate of Public Management,Single,Postgraduate,-,0.5,In Person
+CPBMAO,Graduate Certificate of Public Management,Single,Postgraduate,-,0.5,Online
+CPPO,Graduate Certificate of Public Policy,Single,Postgraduate,-,0.5,Online
+6192XGCPPP,Graduate Certificate of Public Policy,Single,Postgraduate,-,0.5,In Person
+CREGO,Graduate Certificate of Regulation and Governance,Single,Postgraduate,-,0.5,In Person
+CREGOL,Graduate Certificate of Regulation and Governance,Single,Postgraduate,-,0.5,Online
+CSCIE,Graduate Certificate of Science,Single,Postgraduate,-,0.5,In Person
+GCSCM,Graduate Certificate of Science Communication,Single,Postgraduate,-,0.5,Multi-Modal
+CSRES,Graduate Certificate of Social Research,Single,Postgraduate,-,0.5,Multi-Modal
+CSTRAT,Graduate Certificate of Strategic Studies,Single,Postgraduate,-,0.5,In Person
+CSTUD,Graduate Certificate of Studies,Single,Postgraduate,-,0.5,In Person
+CTEGO,Graduate Certificate of Technology Governance,Single,Postgraduate,-,0.5,In Person
+CTEGOL,Graduate Certificate of Technology Governance,Single,Postgraduate,-,0.5,Online
+CRARC,Graduate Certificate of the Repatriation of Ancestral Remains and Cultural Objects,Single,Postgraduate,-,0.5,In Person
+DADAN,Graduate Diploma of Applied Data Analytics,Single,Postgraduate,-,1,In Person
+DBUSI,Graduate Diploma of Business,Single,Postgraduate,-,1,In Person
+6706XGDCP,Graduate Diploma of Computing,Single,Postgraduate,-,1,In Person
+DECON,Graduate Diploma of Economics,Single,Postgraduate,-,1,In Person
+DENVI,Graduate Diploma of Environment,Single,Postgraduate,-,1,In Person
+DIAFF,Graduate Diploma of International Affairs,Single,Postgraduate,-,1,In Person
+GPPSY,Graduate Diploma of Professional Psychology,Single,Postgraduate,-,1,In Person
+DPUBH,Graduate Diploma of Public Health,Single,Postgraduate,-,1,Multi-Modal
+DPUBP,Graduate Diploma of Public Policy,Single,Postgraduate,-,1,In Person
+6600XGDSCI,Graduate Diploma of Science,Single,Postgraduate,-,1,In Person
+DSTUD,Graduate Diploma of Studies,Single,Postgraduate,-,1,In Person
+MJD,Juris Doctor,Single,Postgraduate,-,3,In Person
+7414XMACCT,Master of Accounting,Single,Postgraduate,-,2,In Person
+7420XMACTP,Master of Actuarial Practice,Single,Postgraduate,-,2.5,In Person
+7410XMACTS,Master of Actuarial Studies,Single,Postgraduate,-,2,In Person
+VANTP,Master of Anthropology (Advanced),Single,Postgraduate,-,1.5,In Person
+MAPF,Master of Anthropology and Planetary Futures,Single,Postgraduate,-,1,Multi-Modal
+VAPF,Master of Anthropology and Planetary Futures (Advanced),Single,Postgraduate,-,1.5,Multi-Modal
+MAPAC,Master of Applied Accounting,Single,Postgraduate,-,1,In Person
+MAAMFM,Master of Applied Accounting and Master of Financial Management,Single,Postgraduate,-,2,In Person
+VAAAD,Master of Applied Anthropology and Development (Advanced),Single,Postgraduate,-,1.5,In Person
+MACRI,Master of Applied Criminology,Single,Postgraduate,-,1,Multi-Modal
+MACYB,Master of Applied Cybernetics,Single,Postgraduate,-,1,In Person
+VACYB,Master of Applied Cybernetics (Advanced),Single,Postgraduate,-,1.5,In Person
+MADAN,Master of Applied Data Analytics,Single,Postgraduate,-,1.5,In Person
+MAPEC,Master of Applied Economics,Single,Postgraduate,-,2,In Person
+7421XMAPFN,Master of Applied Finance,Single,Postgraduate,-,1.5,In Person
+MAESC,Master of Archaeological and Evolutionary Science,Single,Postgraduate,-,2,In Person
+VAESC,Master of Archaeological and Evolutionary Science (Advanced),Single,Postgraduate,-,2,In Person
+MAHST,Master of Art History and Curatorial Studies,Single,Postgraduate,-,1,In Person
+VAHST,Master of Art History and Curatorial Studies (Advanced),Single,Postgraduate,-,1.5,In Person
+MANPS,Master of Asian and Pacific Studies,Single,Postgraduate,-,2,In Person
+MBIOT,Master of Biotechnology,Single,Postgraduate,-,2,In Person
+VBIOT,Master of Biotechnology (Advanced),Single,Postgraduate,-,2,In Person
+MBADM,Master of Business Administration,Single,Postgraduate,-,1.5,In Person
+MBUSA,Master of Business Administration,Single,Postgraduate,-,1,In Person
+MBINS,Master of Business Information Systems,Single,Postgraduate,-,2,In Person
+MCLIM,Master of Climate Change,Single,Postgraduate,-,1.5,In Person
+MCLIMO,Master of Climate Change,Single,Postgraduate,-,1.5,Online
+7601XMCPSY,Master of Clinical Psychology,Single,Postgraduate,-,2,In Person
+VCOMM,Master of Commerce (Advanced),Single,Postgraduate,-,2,In Person
+7706XMCOMP,Master of Computing,Single,Postgraduate,-,2,In Person
+7722XVCOMP,Master of Computing (Advanced),Single,Postgraduate,-,2,In Person
+MCAP,Master of Contemporary Art Practices,Single,Postgraduate,-,1,In Person
+VCAP,Master of Contemporary Art Practices (Advanced),Single,Postgraduate,-,1.5,In Person
+MCHAM,"Master of Culture, Health and Medicine",Single,Postgraduate,-,2,Multi-Modal
+VCHAM,"Master of Culture, Health and Medicine (Advanced)",Single,Postgraduate,-,2,Multi-Modal
+MDIHU,Master of Digital Humanities,Single,Postgraduate,-,1,Multi-Modal
+MDHPU,Master of Digital Humanities and Public Culture,Single,Postgraduate,-,1,In Person
+MDIP,Master of Diplomacy,Single,Postgraduate,-,1,In Person
+MDIPOL,Master of Diplomacy,Single,Postgraduate,-,1,Online
+VEASC,Master of Earth Sciences (Advanced),Single,Postgraduate,-,2,In Person
+MECPO,Master of Economic Policy,Single,Postgraduate,-,2,In Person
+MECON,Master of Economics,Single,Postgraduate,-,2,In Person
+MENCH,Master of Energy Change,Single,Postgraduate,-,2,In Person
+VENCH,Master of Energy Change (Advanced),Single,Postgraduate,-,2,In Person
+MENASI,Master of Engaging Asia,Single,Postgraduate,-,1.5,In Person
+NELENG,Master of Engineering in Electrical Engineering,Single,Postgraduate,-,2,In Person
+MEINV,Master of Entrepreneurship and Innovation,Single,Postgraduate,-,2,In Person
+MENVI,Master of Environment,Single,Postgraduate,-,2,In Person
+VENVI,Master of Environment (Advanced),Single,Postgraduate,-,2,In Person
+MEMDV,Master of Environmental Management and Development,Single,Postgraduate,-,2,In Person
+MEMDVO,Master of Environmental Management and Development,Single,Postgraduate,-,2,Online
+MEREC,Master of Environmental and Resource Economics,Single,Postgraduate,-,2,In Person
+MERECO,Master of Environmental and Resource Economics,Single,Postgraduate,-,2,Online
+7418XMFIN,Master of Finance,Single,Postgraduate,-,2,In Person
+MFIEC,Master of Financial Economics,Single,Postgraduate,-,2,In Person
+MFINM,Master of Financial Management,Single,Postgraduate,-,1,In Person
+MFIML,Master of Financial Management and Law,Single,Postgraduate,-,2,Multi-Modal
+MFORS,Master of Forests,Single,Postgraduate,-,2,In Person
+VFORS,Master of Forests (Advanced),Single,Postgraduate,-,2,In Person
+MGAL,Master of General and Applied Linguistics,Single,Postgraduate,-,1.5,In Person
+VLING,Master of General and Applied Linguistics (Advanced),Single,Postgraduate,-,2,In Person
+MGSS,Master of Global Securities and Strategy,Single,Postgraduate,-,1,Online
+VGLOB,Master of Globalisation (Advanced),Single,Postgraduate,-,2,In Person
+MHRTM,Master of Heritage Tourism Management,Single,Postgraduate,-,1.5,Multi-Modal
+MHIT,Master of History,Single,Postgraduate,-,1,In Person
+VHIT,Master of History (Advanced),Single,Postgraduate,-,1.5,In Person
+MINLD,Master of International Law and Diplomacy,Single,Postgraduate,-,2,Multi-Modal
+MINLDO,Master of International Law and Diplomacy,Single,Postgraduate,-,2,Online
+MIMGT,Master of International Management,Single,Postgraduate,-,2,In Person
+MINTR,Master of International Relations,Single,Postgraduate,-,2,In Person
+MIDEC,Master of International and Development Economics,Single,Postgraduate,-,2,In Person
+MIDECO,Master of International and Development Economics,Single,Postgraduate,-,2,Online
+MLLM,Master of Laws,Single,Postgraduate,-,1,In Person
+MMLCV,Master of Machine Learning and Computer Vision,Single,Postgraduate,-,2,In Person
+MMGNT,Master of Management,Single,Postgraduate,-,1,In Person
+VMGNT,Master of Management (Advanced),Single,Postgraduate,-,2,In Person
+MMKMT,Master of Marketing Management,Single,Postgraduate,-,2,In Person
+VMASC,Master of Mathematical Sciences (Advanced),Single,Postgraduate,-,2,In Person
+VMECA,Master of Middle Eastern and Central Asian Studies (Advanced),Single,Postgraduate,-,2,In Person
+MECAS,Master of Middle Eastern and Central Asian Studies (MECAS),Single,Postgraduate,-,1.5,In Person
+MMHES,Master of Museum and Heritage Studies,Single,Postgraduate,-,1,Multi-Modal
+MMHS,Master of Museum and Heritage Studies,Single,Postgraduate,-,1.5,Multi-Modal
+VMUHS,Master of Museum and Heritage Studies (Advanced),Single,Postgraduate,-,2,In Person
+MNSEP,Master of National Security Policy,Single,Postgraduate,-,1.5,In Person
+MNSEPO,Master of National Security Policy,Single,Postgraduate,-,1.5,Online
+MNEUR,Master of Neuroscience,Single,Postgraduate,-,2,In Person
+VNEUR,Master of Neuroscience (Advanced),Single,Postgraduate,-,2,In Person
+MPADEO,Master of Pacific Development,Single,Postgraduate,-,1,Online
+MPADE,Master of Pacific Development,Single,Postgraduate,-,1,In Person
+MPCS,Master of Peace and Conflict Studies,Single,Postgraduate,-,1,In Person
+MPCSO,Master of Peace and Conflict Studies,Single,Postgraduate,-,1,Online
+VPCS,Master of Peace and Conflict Studies (Advanced),Single,Postgraduate,-,1.5,In Person
+VPCSO,Master of Peace and Conflict Studies (Advanced),Single,Postgraduate,-,1.5,Online
+MPOLS,Master of Political Science,Single,Postgraduate,-,1.5,In Person
+VPLSC,Master of Political Science (Advanced),Single,Postgraduate,-,2,In Person
+MPSC,Master of Preclinical Science,Single,Postgraduate,-,2,In Person
+7413XMPACC,Master of Professional Accounting,Single,Postgraduate,-,1.5,In Person
+MPPSY,Master of Professional Psychology,Single,Postgraduate,-,2,In Person
+MPROM,Master of Project Management,Single,Postgraduate,-,2,In Person
+MPAD,Master of Public Administration,Single,Postgraduate,-,1.5,In Person
+MPADO,Master of Public Administration,Single,Postgraduate,-,1.5,Online
+MPUBH,Master of Public Health,Single,Postgraduate,-,2,Multi-Modal
+VPUBH,Master of Public Health (Advanced),Single,Postgraduate,-,2,Multi-Modal
+MPUPPO,Master of Public Policy,Single,Postgraduate,-,2,Online
+MPUPP,Master of Public Policy,Single,Postgraduate,-,2,In Person
+MPPAU,Master of Public Policy/Master of Public Policy ANU - U Tokyo,Single,Postgraduate,-,2,In Person
+MREGGO,Master of Regulation and Governance,Single,Postgraduate,-,1.5,Online
+MREGG,Master of Regulation and Governance,Single,Postgraduate,-,1.5,In Person
+VSCAI,Master of Science (Advanced) in Agricultural Innovation,Single,Postgraduate,-,2,In Person
+VSCAA,Master of Science (Advanced) in Astronomy and Astrophysics,Single,Postgraduate,-,2,In Person
+VSCBS,Master of Science (Advanced) in Biological Sciences,Single,Postgraduate,-,2,In Person
+VSCMC,Master of Science (Advanced) in Materials Science,Single,Postgraduate,-,2,In Person
+VSCNS,Master of Science (Advanced) in Nuclear Science,Single,Postgraduate,-,2,In Person
+VSCPI,Master of Science (Advanced) in Precision Instrumentation and Measurement,Single,Postgraduate,-,2,In Person
+VSCQB,Master of Science (Advanced) in Quantitative Biology and Bioinformatics,Single,Postgraduate,-,2,In Person
+VSCQT,Master of Science (Advanced) in Quantum Technology,Single,Postgraduate,-,2,In Person
+VSCTP,Master of Science (Advanced) in Theoretical Physics,Single,Postgraduate,-,2,In Person
+MSCOM,Master of Science Communication,Single,Postgraduate,-,2,In Person
+NSCAI,Master of Science in Agricultural Innovation,Single,Postgraduate,-,2,In Person
+NSCAA,Master of Science in Astronomy and Astrophysics,Single,Postgraduate,-,2,In Person
+NSCBS,Master of Science in Biological Sciences,Single,Postgraduate,-,2,In Person
+NSCES,Master of Science in Earth Sciences,Single,Postgraduate,-,2,In Person
+NSCMC,Master of Science in Materials Science,Single,Postgraduate,-,2,In Person
+NSCMS,Master of Science in Mathematical Sciences,Single,Postgraduate,-,2,In Person
+NSCNS,Master of Science in Nuclear Science,Single,Postgraduate,-,2,In Person
+NSCPI,Master of Science in Precision Instrumentation and Measurement,Single,Postgraduate,-,2,In Person
+NSCQB,Master of Science in Quantitative Biology and Bioinformatics,Single,Postgraduate,-,2,In Person
+NSCQT,Master of Science in Quantum Technology,Single,Postgraduate,-,2,In Person
+NSCTP,Master of Science in Theoretical Physics,Single,Postgraduate,-,2,In Person
+MSRM,Master of Social Research Methods,Single,Postgraduate,-,1,In Person
+VSRM,Master of Social Research Methods (Advanced),Single,Postgraduate,-,1.5,In Person
+MSDA,Master of Statistical Data Analysis,Single,Postgraduate,-,1,In Person
+MSTAT,Master of Statistics,Single,Postgraduate,-,2,In Person
+MSTRAT,Master of Strategic Studies,Single,Postgraduate,-,1.5,In Person
+VSTST,Master of Strategic Studies (Advanced),Single,Postgraduate,-,2,In Person
+MSTD,Master of Studies,Single,Postgraduate,-,1.5,In Person
+MTEGO,Master of Technology Governance,Single,Postgraduate,-,1.5,In Person
+MTEGOL,Master of Technology Governance,Single,Postgraduate,-,1.5,Online
+VTRAN,Master of Translation (Advanced),Single,Postgraduate,-,2,In Person
+8650XMPHIL,"Master of Philosophy, Mathematical Sciences",Single,Research,-,2,In Person
+9714XPHD,"Doctor of Philosophy, School of Computing",Single,Research,-,4,In Person
+9300XLLD,Doctor of Laws,Single,Research,-,,In Person
+9101XLITTD,Doctor of Letters,Single,Research,-,,In Person
+9911XMD,Doctor of Medicine,Single,Research,-,,In Person
+9064XCLPSY,Doctor of Philosophy (Clinical Psychology),Single,Research,-,4,In Person
+9040XPHD,"Doctor of Philosophy, ANU College of Business and Economics",Single,Research,-,4,In Person
+9030XPHD,"Doctor of Philosophy, ANU College of Law",Single,Research,-,4,In Person
+9670XPHD,"Doctor of Philosophy, Astronomy and Astrophysics",Single,Research,-,4,In Person
+9603XPHD,"Doctor of Philosophy, Australian National Centre for the Public Awareness of Science",Single,Research,-,4,In Person
+9066XPHD,"Doctor of Philosophy, Biology",Single,Research,-,4,In Person
+9620XPHD,"Doctor of Philosophy, Chemistry",Single,Research,-,4,In Person
+9540XPHD,"Doctor of Philosophy, Crawford School of Public Policy",Single,Research,-,4,In Person
+9050XPHD,"Doctor of Philosophy, Culture, History and Languages",Single,Research,-,4,In Person
+9640XPHD,"Doctor of Philosophy, Earth Sciences",Single,Research,-,4,In Person
+9065XPHD,"Doctor of Philosophy, Fenner School of Environment and Society",Single,Research,-,4,In Person
+9510XPHD,"Doctor of Philosophy, International, Political and Strategic Studies",Single,Research,-,4,In Person
+9710XPHD,"Doctor of Philosophy, John Curtin School of Medical Research",Single,Research,-,4,In Person
+9650XPHD,"Doctor of Philosophy, Mathematical Sciences",Single,Research,-,4,In Person
+9910XPHD,"Doctor of Philosophy, Medicine",Single,Research,-,4,In Person
+9850XPHD,"Doctor of Philosophy, National Security College",Single,Research,-,4,In Person
+9680XPHD,"Doctor of Philosophy, Physics",Single,Research,-,4,In Person
+9602XPHD,"Doctor of Philosophy, Population Health",Single,Research,-,4,In Person
+9723XPHD,"Doctor of Philosophy, Psychology",Single,Research,-,4,In Person
+9560XPHD,"Doctor of Philosophy, Regulation and Governance",Single,Research,-,4,In Person
+9552XPHD,"Doctor of Philosophy, Research School of Humanities and the Arts",Single,Research,-,4,In Person
+9520XPHD,"Doctor of Philosophy, Research School of Social Sciences",Single,Research,-,4,In Person
+9073XPHD,"Doctor of Philosophy, School of Cybernetics",Single,Research,-,4,Multi-Modal
+9715XPHD,"Doctor of Philosophy, School of Engineering",Single,Research,-,4,In Person
+9060XPHD,"Doctor of Philosophy, Science",Single,Research,-,4,In Person
+9600XDSCI,Doctor of Science,Single,Research,-,,In Person
+8030XMPHIL,"Master of Philosophy (MPhil), ANU College of Law",Single,Research,-,2,In Person
+8721XMPHIL,Master of Philosophy in Applied Epidemiology,Single,Research,-,2,In Person
+8040XMPHIL,"Master of Philosophy, ANU College of Business and Economics",Single,Research,-,2,In Person
+8060XMPHIL,"Master of Philosophy, ANU Colleges of Science",Single,Research,-,2,In Person
+8670XMPHIL,"Master of Philosophy, Astronomy and Astrophysics",Single,Research,-,2,In Person
+8603XMPHIL,"Master of Philosophy, Australian National Centre for the Public Awareness of Science",Single,Research,-,2,In Person
+8066XMPHIL,"Master of Philosophy, Biology",Single,Research,-,2,In Person
+8620XMPHIL,"Master of Philosophy, Chemistry",Single,Research,-,2,In Person
+8540XMPHIL,"Master of Philosophy, Crawford School of Public Policy",Single,Research,-,2,In Person
+8050XMPHIL,"Master of Philosophy, Culture, History and Languages",Single,Research,-,2,In Person
+8640XMPHIL,"Master of Philosophy, Earth Sciences",Single,Research,-,2,In Person
+8065XMPHIL,"Master of Philosophy, Fenner School of Environment and Society",Single,Research,-,2,In Person
+8510XMPHIL,"Master of Philosophy, International, Political and Strategic Studies",Single,Research,-,2,In Person
+8710XMPHIL,"Master of Philosophy, John Curtin School of Medical Research",Single,Research,-,2,In Person
+8910XMPHIL,"Master of Philosophy, Medicine",Single,Research,-,2,In Person
+8850XMPHIL,"Master of Philosophy, National Security College",Single,Research,-,2,In Person
+8680XMPHIL,"Master of Philosophy, Physics",Single,Research,-,2,In Person
+8601XMPHIL,"Master of Philosophy, Population Health",Single,Research,-,2,In Person
+8723XMPHIL,"Master of Philosophy, Psychology",Single,Research,-,2,In Person
+8560XMPHIL,"Master of Philosophy, Regulation and Governance",Single,Research,-,2,In Person
+8551XMPHIL,"Master of Philosophy, Research School of Humanities and the Arts",Single,Research,-,2,In Person
+8520XMPHIL,"Master of Philosophy, Research School of Social Sciences",Single,Research,-,2,In Person
+8714XMPHIL,"Master of Philosophy, School of Computing",Single,Research,-,2,In Person
+8715XMPHIL,"Master of Philosophy, School of Engineering",Single,Research,-,2,In Person
+1006XSRS,ANU Summer Research Scholarship Program,Single,Non-award,-,1,In Person
+1152XNAWD,Cross Institutional - College of Asia and the Pacific Language Partnership,Single,Non-award,-,,In Person
+5036XGSPP,Global Summer Program (Postgraduate),Single,Non-award,-,,In Person
+1305XGSPU,Global Summer Program (Undergraduate),Single,Non-award,-,,In Person
+5082XCRWFD,Graduate Bridging Program (Crawford School of Public Policy),Single,Non-award,-,,In Person
+5034XNAWD,Graduate Exchange Program,Single,Non-award,-,,In Person
+5031XNAWD,Graduate Exchange Program,Single,Non-award,-,,In Person
+5050XNAWD,Graduate Non-Award,Single,Non-award,-,,In Person
+5130XNAWD,Graduate Non-Award (ANU College of Law),Single,Non-award,-,,In Person
+5160XNAWD,Graduate Non-Award (ANU Colleges of Science),Single,Non-award,-,,In Person
+5150XNAWD,Graduate Non-Award (College of Asia and the Pacific),Single,Non-award,-,,Multi-Modal
+5170XNAWD,Graduate Non-Award (College of Engineering and Computer Science),Single,Non-award,-,,In Person
+5092XNAWD,Graduate Non-Award (Research),Single,Non-award,-,,In Person
+5191XCMHS,Graduate Non-Award Cross Institutional (ANU College of Medicine Biology and Environment),Single,Non-award,-,,In Person
+5051XNAWD,Graduate Non-Award Cross-Institutional,Single,Non-award,-,,In Person
+5151XCAP,Graduate Non-Award Cross-Institutional (ANU College of Asia and the Pacific),Single,Non-award,-,,In Person
+5141XCBE,Graduate Non-Award Cross-Institutional (ANU College of Business and Economics),Single,Non-award,-,,In Person
+5172XCECS,Graduate Non-Award Cross-Institutional (ANU College of Engineering and Computer Science),Single,Non-award,-,,In Person
+5131XNAWD,Graduate Non-Award Cross-Institutional (ANU College of Law),Single,Non-award,-,,In Person
+5162XCOS,Graduate Non-Award Cross-Institutional (ANU Colleges of Science),Single,Non-award,-,,In Person
+5003XNAWD,Graduate Non-Award MOOC Exchange,Single,Non-award,-,1,In Person
+5179XNSC,"Graduate Non-Award, National Security College",Single,Non-award,-,,In Person
+5035XJOINT,Joint Degree Program National University Singapore -The Australian National University,Single,Non-award,-,,In Person
+1140XNAWD,Non Award (ANU College of Business and Economics),Single,Non-award,-,,In Person
+1302XNAWD,Non Award Cross Institutional,Single,Non-award,-,,In Person
+1141XNAWD,Non Award Cross-Institutional (ANU College of Business and Economics),Single,Non-award,-,,In Person
+1301XNAWD,Non Award Exchange Program (12 Months),Single,Non-award,-,1,In Person
+1301XNAWD6,Non Award Exchange Program (6 Months),Single,Non-award,-,0.5,In Person
+1155XNAWD,Non Award – Open Universities Australia,Single,Non-award,-,,In Person
+1170XNAWD,Non-Award (ANU College of Engineering and Computer Science),Single,Non-award,-,,In Person
+1160XNAWD,Non-Award (ANU Colleges of Science),Single,Non-award,-,,In Person
+1190XNAWD,Non-Award (ANU Medical School),Single,Non-award,-,,In Person
+1110XNAWD,Non-Award Arts (ANU College of Arts and Social Sciences),Single,Non-award,-,,In Person
+1111XNAWD,Non-Award Cross-Institutional (ANU College of Arts and Social Sciences),Single,Non-award,-,,In Person
+1151XNAWD,Non-Award Cross-Institutional (ANU College of Asia and the Pacific),Single,Non-award,-,,In Person
+1171XNAWD,Non-Award Cross-Institutional (ANU College of Engineering and Computer Science),Single,Non-award,-,,In Person
+1131XNAWD,Non-Award Cross-Institutional (ANU College of Law),Single,Non-award,-,,In Person
+1161XNAWD,Non-Award Cross-Institutional (ANU Colleges of Science),Single,Non-award,-,,In Person
+1005XNAWD,Non-Award Cross-Institutional National Institute of the Arts/University of Canberra,Single,Non-award,-,,In Person
+1130XNAWD,Non-Award Law (ANU College of Law),Single,Non-award,-,,In Person
+1303XNAWD,Non-Award MOOC Exchange,Single,Non-award,-,1,In Person
+1300XNAW12,Non-Award Study Abroad Program (12 Months),Single,Non-award,-,1,In Person
+1300XNAWD6,Non-Award Study Abroad Program (6 Months),Single,Non-award,-,,In Person
+1150XNAWD,UG Non-Award (College of Asia and the Pacific),Single,Non-award,-,,Multi-Modal
